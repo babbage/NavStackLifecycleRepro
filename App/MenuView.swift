@@ -4,6 +4,7 @@ enum Scenario: String, CaseIterable, Identifiable {
     case prePopulated = "Case A: NavigationStack init with non-empty path"
     case emptyThenPush = "Case B: Empty path, push from .task"
     case fullScreenCover = "Case C: fullScreenCover wrapping Case A"
+    case churningParent = "Case D: churning @Observable parent + Color root"
     var id: String { rawValue }
 }
 
@@ -20,6 +21,8 @@ struct MenuView: View {
                     CaseBView()
                 case .fullScreenCover:
                     CaseCView()
+                case .churningParent:
+                    CaseDView()
                 }
             }
             .safeAreaInset(edge: .bottom) {

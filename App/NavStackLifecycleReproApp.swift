@@ -23,6 +23,7 @@ struct RootView: View {
         case "A": CaseAView()
         case "B": CaseBView()
         case "C": CaseCView()
+        case "D": CaseDView()
         default: MenuView()
         }
     }
