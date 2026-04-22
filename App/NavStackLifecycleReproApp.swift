@@ -22,6 +22,7 @@ struct RootView: View {
         switch ProcessInfo.processInfo.environment["AUTORUN_CASE"] {
         case "A": CaseAView()
         case "B": CaseBView()
+        case "C": CaseCView()
         default: MenuView()
         }
     }

@@ -3,6 +3,7 @@ import SwiftUI
 enum Scenario: String, CaseIterable, Identifiable {
     case prePopulated = "Case A: NavigationStack init with non-empty path"
     case emptyThenPush = "Case B: Empty path, push from .task"
+    case fullScreenCover = "Case C: fullScreenCover wrapping Case A"
     var id: String { rawValue }
 }
 
@@ -17,6 +18,8 @@ struct MenuView: View {
                     CaseAView()
                 case .emptyThenPush:
                     CaseBView()
+                case .fullScreenCover:
+                    CaseCView()
                 }
             }
             .safeAreaInset(edge: .bottom) {
